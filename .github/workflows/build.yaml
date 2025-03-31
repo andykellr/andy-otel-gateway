@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # Build the OpenTelemetry distribution using this custom action
-      - uses: observiq/otel-distro-builder@v1
+      - uses: observiq/otel-distro-builder@main
         with:
           manifest: "./manifest.yaml"
 
