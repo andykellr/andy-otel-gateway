@@ -1,0 +1,25 @@
+name: Andy Otel Gateway
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Build the OpenTelemetry distribution using this custom action
+      - uses: observiq/otel-distro-builder@v1
+        with:
+          manifest: "./manifest.yaml"
+
+      # Create a GitHub Release and attach the build artifacts
+      # This makes the artifacts available for download from the Releases page
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ github.workspace }}/artifacts/*
