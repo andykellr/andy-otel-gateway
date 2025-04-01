@@ -3,6 +3,7 @@ dist:
   name: andy-otel-gateway
   description: Andy's Otel Gateway distro for the OpenTelemetry Collector
   output_path: ./dist
+  version: 1.0.3
 conf_resolver:
   default_uri_scheme: "env"
 extensions:
