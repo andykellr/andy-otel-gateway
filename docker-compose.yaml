@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  collector:
+    restart: always
+    image: andy-otel-gateway:latest
+    environment:
+      # ee-pg
+      - OPAMP_LABELS=configuration=linux-metrics
+      - OPAMP_SECRET_KEY=01H7JCQ7C9VXF6ZGDX52X1A6GE
+      - OPAMP_ENDPOINT=ws://host.docker.internal:3001/v1/opamp
+
+    deploy:
+      replicas: 1
