@@ -1,5 +1,13 @@
 # andy-otel-gateway
 
+## Generating the build
+
+```bash
+docker pull ghcr.io/observiq/otel-distro-builder:main
+docker run --rm -v $(pwd):/workspace -v $(pwd)/build:/build ghcr.io/observiq/otel-distro-builder:main \
+  --manifest /workspace/manifest.yaml
+```
+
 ## Building the image
 
 Important! You need to have a copy of the `opampsupervisor` binary in the root directory.
