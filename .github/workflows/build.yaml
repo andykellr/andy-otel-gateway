@@ -16,6 +16,7 @@ jobs:
       - uses: observiq/otel-distro-builder@main
         with:
           manifest: "./manifest.yaml"
+          platforms: linux/arm64
 
       # Create a GitHub Release and attach the build artifacts
       # This makes the artifacts available for download from the Releases page
