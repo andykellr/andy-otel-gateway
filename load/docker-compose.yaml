@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  collector:
+    restart: always
+    image: observiq/observiq-otel-collector:1.73.1
+    environment:
+      # ee-pg
+      - OPAMP_LABELS=configuration=linux-metrics
+      - OPAMP_SECRET_KEY=01JQVFDZ9Q7Z775SDG6ES1TJEG
+      - OPAMP_ENDPOINT=ws://host.docker.internal:3001/v1/opamp
+
+    deploy:
+      replicas: 2

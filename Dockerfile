@@ -27,7 +27,7 @@ COPY --from=stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifica
 COPY --from=stage --chown=otel:otel /etc/otel /etc/otel
 COPY --from=stage --chown=otel:otel /etc/otel/storage /etc/otel/storage
 
-COPY build/dist/andy-otel-gateway_linux_arm64/andy-otel-gateway /collector/andy-otel-gateway
+COPY build/dist/andy-otel-gateway_linux_arm64_v8.0/andy-otel-gateway /collector/andy-otel-gateway
 COPY supervisor.yaml /etc/otel/supervisor.yaml
 COPY opampsupervisor /collector/opampsupervisor
 

@@ -1,7 +1,7 @@
 server:
   endpoint: ws://host.docker.internal:3001/v1/opamp
   headers:
-    Authorization: "Secret-Key 01H7JCQ7C9VXF6ZGDX52X1A6GE"
+    Authorization: "Secret-Key 01JQVFDZ9Q7Z775SDG6ES1TJEG"
   tls:
     insecure: true
     insecure_skip_verify: true
@@ -14,6 +14,9 @@ agent:
   executable: /collector/andy-otel-gateway
   config_apply_timeout: 30s
   bootstrap_timeout: 5s
+  description:
+    non_identifying_attributes:
+      service.labels: "configuration=andy-gateway"
 
 storage:
   directory: "/etc/otel/supervisor_storage"
