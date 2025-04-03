@@ -3,7 +3,7 @@ dist:
   name: andy-otel-gateway
   description: Andy's Otel Gateway distro for the OpenTelemetry Collector
   output_path: ./dist
-  version: v1.0.6
+  version: v1.0.7
 conf_resolver:
   default_uri_scheme: "env"
 extensions:
@@ -11,7 +11,7 @@ extensions:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.123.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/opampextension v0.123.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/encoding/otlpencodingextension v0.123.0
-  - gomod: github.com/observiq/bindplane-otel-collector/extension/bindplaneextension v1.73.1
+  - gomod: github.com/observiq/bindplane-otel-collector/extension/bindplaneextension v1.73.2-0.20250403134946-2a47799757e8
 exporters:
   - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.123.0
   - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.123.0
@@ -20,9 +20,9 @@ processors:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.123.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor v0.123.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.123.0
-  - gomod: github.com/observiq/bindplane-otel-collector/processor/snapshotprocessor v1.73.1
-  - gomod: github.com/observiq/bindplane-otel-collector/processor/throughputmeasurementprocessor v1.73.1
-  - gomod: github.com/observiq/bindplane-otel-collector/processor/topologyprocessor v1.73.1
+  - gomod: github.com/observiq/bindplane-otel-collector/processor/snapshotprocessor v1.73.2-0.20250403134946-2a47799757e8
+  - gomod: github.com/observiq/bindplane-otel-collector/processor/throughputmeasurementprocessor v1.73.2-0.20250403134946-2a47799757e8
+  - gomod: github.com/observiq/bindplane-otel-collector/processor/topologyprocessor v1.73.2-0.20250403134946-2a47799757e8
 receivers:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.123.0
   - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.123.0
