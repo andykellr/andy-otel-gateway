@@ -10,4 +10,4 @@ services:
       - OPAMP_ENDPOINT=ws://host.docker.internal:3001/v1/opamp
 
     deploy:
-      replicas: 2
+      replicas: 50
